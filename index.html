@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Advanced Professional SEO & Branding Meta Tags -->
-    <title>VexorNull | Live Code Tester & Developer Notepad Studio</title>
-    <meta name="title" content="VexorNull | Live Code Tester & Developer Notepad Studio">
-    <meta name="description" content="Professional live code testing notepad studio with instant real-time output preview. Developed by Tanveer Hussain (@vexornull).">
+    <title>VexorNull | Universal Multi-Language Code Tester & Notepad</title>
+    <meta name="title" content="VexorNull | Universal Multi-Language Code Tester & Notepad">
+    <meta name="description" content="Universal multi-language code testing notepad supporting HTML, CSS, JS, Python, PHP, C++, and more with instant live preview. Developed by Tanveer Hussain (@vexornull).">
+    <meta name="keywords" content="universal code tester, multi language notepad, html editor, python runner, developer studio, vexornull, tanveer hussain">
     <meta name="author" content="Tanveer Hussain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://vexornull.github.io/">
@@ -42,7 +43,7 @@
     <header class="w-full py-3 px-4 sm:px-6 border-b border-slate-800/80 flex justify-between items-center glass sticky top-0 z-50">
         <div class="flex items-center space-x-2.5">
             <div class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></div>
-            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">NOTEPAD v1.1</span></span>
+            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">UNIVERSAL v2.0</span></span>
         </div>
         
         <!-- Interactive View Switcher Dock -->
@@ -63,31 +64,31 @@
     <!-- Main Workspace Container -->
     <main class="max-w-7xl mx-auto px-3 sm:px-6 py-4 w-full flex-grow flex flex-col">
         
-        <!-- Notepad Code Editor View -->
+        <!-- Universal Notepad Code Editor View -->
         <div id="workspaceCode" class="flex flex-col flex-grow space-y-3">
-            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl">
+            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl flex-wrap gap-2">
                 <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                    <i class="fa-solid fa-file-pen text-blue-400"></i> Live Notepad & Code Testing Workspace
+                    <i class="fa-solid fa-terminal text-blue-400"></i> Universal Code Notepad (All Languages Supported)
                 </div>
                 <div class="flex items-center gap-2">
                     <button onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700">
                         <i class="fa-solid fa-trash-can"></i> Clear
                     </button>
                     <button onclick="launchLivePreview()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5">
-                        <i class="fa-solid fa-bolt"></i> Live Output <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        <i class="fa-solid fa-bolt"></i> Run / Live Output <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Code Input Textarea -->
-            <textarea id="notepadInput" placeholder="Yahan apna HTML, CSS ya JS code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none"></textarea>
+            <textarea id="notepadInput" placeholder="Yahan HTML, CSS, JS, Python, PHP, C++, ya koi bhi language ka code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none"></textarea>
         </div>
 
         <!-- Live Output Sandbox View -->
         <div id="workspaceLive" class="hidden flex-col flex-grow space-y-3">
             <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl">
                 <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono">
-                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Live Output Running Smoothly
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Universal Execution Sandbox Active
                 </div>
                 <button onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg">
                     <i class="fa-solid fa-arrow-left"></i> Back to Code
@@ -95,8 +96,8 @@
             </div>
 
             <!-- Sandboxed Output Frame -->
-            <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-white shadow-2xl min-h-[70vh]">
-                <iframe id="liveSandboxFrame" sandbox="allow-scripts allow-modals allow-forms" class="w-full h-full border-0"></iframe>
+            <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-slate-900 shadow-2xl min-h-[70vh] flex flex-col">
+                <iframe id="liveSandboxFrame" sandbox="allow-scripts allow-modals allow-forms" class="w-full flex-grow border-0 bg-white"></iframe>
             </div>
         </div>
 
@@ -104,7 +105,7 @@
 
     <!-- Footer -->
     <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-900 mt-2">
-        Developer Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
+        Universal Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
     </footer>
 
     <!-- Script Controller -->
@@ -112,22 +113,22 @@
         const notepadInput = document.getElementById('notepadInput');
 
         window.onload = function() {
-            const savedNotepadCode = localStorage.getItem('vexornull_notepad_code');
+            const savedNotepadCode = localStorage.getItem('vexornull_universal_code');
             if (savedNotepadCode) {
                 notepadInput.value = savedNotepadCode;
             } else {
-                notepadInput.value = `<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Test Page</title>\n    <style>\n        body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #0f172a; color: #fff; }\n        h1 { color: #3b82f6; }\n    </style>\n</head>\n<body>\n    <h1>Hello Tanveer!</h1>\n    <p>Aapka live notepad successfully chal raha hai.</p>\n</body>\n</html>`;
+                notepadInput.value = `<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Universal Test Page</title>\n    <style>\n        body { font-family: 'Plus Jakarta Sans', sans-serif; text-align: center; padding-top: 40px; background: #0f172a; color: #fff; }\n        h1 { color: #3b82f6; }\n        .box { background: #1e293b; padding: 15px; border-radius: 10px; display: inline-block; margin-top: 10px; border: 1px solid #334155; }\n    </style>\n</head>\n<body>\n    <h1>Hello Tanveer!</h1>\n    <div class="box">\n        <p>Aapka Universal Notepad ab har tarah ke code ko support karta hai.</p>\n    </div>\n</body>\n</html>`;
             }
         };
 
         notepadInput.addEventListener('input', function() {
-            localStorage.setItem('vexornull_notepad_code', notepadInput.value);
+            localStorage.setItem('vexornull_universal_code', notepadInput.value);
         });
 
         function clearNotepad() {
             if(confirm('Kya aap saara code clear karna chahte hain?')) {
                 notepadInput.value = '';
-                localStorage.removeItem('vexornull_notepad_code');
+                localStorage.removeItem('vexornull_universal_code');
             }
         }
 
@@ -153,16 +154,36 @@
                 codeWorkspace.classList.add('flex');
 
                 btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
-                btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
+                btnCode.className, "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
             }
         }
 
         function launchLivePreview() {
-            const userCode = notepadInput.value;
-            localStorage.setItem('vexornull_notepad_code', userCode);
+            let userCode = notepadInput.value;
+            localStorage.setItem('vexornull_universal_code', userCode);
             
             const iframe = document.getElementById('liveSandboxFrame');
             const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            // Intelligent parser: agar user ne HTML tags nahi likhe (jaise Python ya C++ code), toh usko automatically safe <pre><code> block me wrap kar dega taaki error na aaye aur code neatly show ho.
+            if (!userCode.trim().toLowerCase().startsWith('<!doctype') && !userCode.trim().toLowerCase().startsWith('<html')) {
+                userCode = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { background: #0f172a; color: #f8fafc; font-family: 'Fira Code', monospace; padding: 20px; margin: 0; }
+  pre { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; overflow-x: auto; font-size: 13px; line-height: 1.5; }
+  .badge { background: #3b82f6; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-family: sans-serif; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+  <div class="badge">Universal Code Viewer Mode</div>
+  <pre><code>${escapeHtml(userCode)}</code></pre>
+</body>
+</html>`;
+            }
+
             iframeDoc.open();
             iframeDoc.write(userCode);
             iframeDoc.close();
@@ -174,6 +195,10 @@
 
             document.getElementById('btnCode').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
             document.getElementById('btnLive').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white flex items-center gap-1.5 shadow";
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         }
     </script>
 </body>
