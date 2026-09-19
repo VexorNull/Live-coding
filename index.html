@@ -159,10 +159,13 @@
             if (savedHtml !== null) codeHtml.value = savedHtml;
             else codeHtml.value = `<!-- Tanveer Hussain (@vexornull) - Profile Template -->
 <div class="profile-card">
-    <div class="avatar">TH</div>
+    <a href="https://drive.google.com/file/d/1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR/view?usp=drivesdk" target="_blank" class="avatar-link" title="View Experience Letter">
+        <div class="avatar">TH</div>
+        <div class="badge-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+    </a>
     <h1>Tanveer Hussain</h1>
     <p class="handle">@vexornull | Full-Stack Developer</p>
-    <p class="bio">Welcome to VexorNull Studio! Yahan aap apni HTML, CSS aur JS ki websites ko alag-alag tabs me likh kar live run kar sakte hain.</p>
+    <p class="bio">Welcome to VexorNull Studio! Upar di gayi profile picture par click karke aap experience letter dekh sakte hain.</p>
     <button onclick="greetUser()">Say Hello</button>
 </div>`;
 
@@ -188,19 +191,47 @@ body {
     max-width: 360px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
+.avatar-link {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
 .avatar {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 15px auto;
     background: linear-gradient(135deg, #3b82f6, #6366f1);
     color: white;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 22px;
     box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.avatar-link:hover .avatar {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.7);
+    border-color: #60a5fa;
+}
+.badge-icon {
+    position: absolute;
+    bottom: 12px;
+    right: -2px;
+    background: #2563eb;
+    color: white;
+    font-size: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0f172a;
 }
 h1 { font-size: 22px; font-weight: 800; margin-bottom: 4px; color: #ffffff; }
 .handle { font-size: 13px; color: #60a5fa; font-family: monospace; margin-bottom: 15px; }
@@ -227,7 +258,7 @@ function greetWorkspace() {
 greetWorkspace();
 
 function greetUser() {
-    alert("Hello! Aap VexorNull Code Studio use kar rahe hain. Code likhein aur live preview dekhein!");
+    alert("Hello! Aap VexorNull Code Studio use kar rahe hain. Profile picture par click karke Google Drive ka experience letter check kar sakte hain!");
 }`;
         };
 
@@ -272,6 +303,7 @@ function greetUser() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"><\/script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         ${codeCss.value}
     </style>
@@ -322,7 +354,7 @@ function greetUser() {
         }
 
         function downloadProject() {
-            const fullBundle = `<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>VexorNull Exported Website</title>\n<script src="https://cdn.tailwindcss.com"><\/script>\n<style>\n${codeCss.value}\n</style>\n</head>\n<body>\n${codeHtml.value}\n<script>\n${codeJs.value}\n<\/script>\n</body>\n</html>`;
+            const fullBundle = `<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>VexorNull Exported Website</title>\n<script src="https://cdn.tailwindcss.com"><\/script>\n<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\n<style>\n${codeCss.value}\n</style>\n</head>\n<body>\n${codeHtml.value}\n<script>\n${codeJs.value}\n<\/script>\n</body>\n</html>`;
             const blob = new Blob([fullBundle], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
