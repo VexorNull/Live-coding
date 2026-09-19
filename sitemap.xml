@@ -3,9 +3,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
-    <!-- VexorNull Studio - Main Entry Point -->
+    <!-- VexorNull Studio - Vercel Deployment Entry Point -->
     <url>
-        <loc>https://vexornull.github.io/Live-coding/</loc>
+        <loc>https://live-coding-with-vexornull.vercel.app/</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
