@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- ========================================== -->
-    <!-- ADVANCED ENTERPRISE SEO & METADATA -->
-    <!-- ========================================== -->
-    <title>VexorNull | Ultimate Enterprise Multi-Tab Code Studio</title>
-    <meta name="title" content="VexorNull | Ultimate Enterprise Multi-Tab Code Studio">
-    <meta name="description" content="Professional universal multi-language and multi-file code testing studio supporting full website development, split HTML/CSS/JS tabs, and live sandbox execution. Developed by Tanveer Hussain.">
-    <meta name="keywords" content="universal code tester, multi file editor, html css js runner, developer studio, online code runner, vexornull, tanveer hussain">
+    <!-- ========================================================== -->
+    <!-- ULTIMATE ENTERPRISE SEO & METADATA (FULLY UPGRADED)        -->
+    <!-- ========================================================== -->
+    <title>VexorNull Studio | Ultimate Enterprise Multi-Tab Code Runner & Live Sandbox</title>
+    <meta name="title" content="VexorNull Studio | Ultimate Enterprise Multi-Tab Code Runner & Live Sandbox">
+    <meta name="description" content="Professional universal multi-language and multi-file code testing studio supporting full website development, split HTML/CSS/JS tabs, real-time live preview sandbox, and instant project export. Built by Tanveer Hussain.">
+    <meta name="keywords" content="vexornull, tanveer hussain, online code editor, html css js runner, multi file code studio, live website preview, web development sandbox, frontend developer portfolio, karachi developer">
     <meta name="author" content="Tanveer Hussain">
     <meta name="creator" content="Tanveer Hussain">
-    <meta name="publisher" content="VexorNull Studio">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="publisher" content="VexorNull Enterprise Studio">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#030712">
+    <meta name="application-name" content="VexorNull Studio">
     <link rel="canonical" href="https://vexornull.github.io/Live-coding/">
     <link rel="icon" type="image/png" href="https://vexornull.github.io/favicon/favicon.png">
+    <link rel="sitemap" type="application/xml" href="https://vexornull.github.io/Live-coding/sitemap.xml">
+
+    <!-- Open Graph / Facebook / LinkedIn SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vexornull.github.io/Live-coding/">
+    <meta property="og:title" content="VexorNull Studio | Ultimate Enterprise Multi-Tab Code Runner">
+    <meta property="og:description" content="Test HTML, CSS, and JS code instantly with live website preview, multi-tab layout, and one-click project export. Created by Tanveer Hussain (@vexornull).">
+    <meta property="og:image" content="https://vexornull.github.io/favicon/favicon.png">
+
+    <!-- Twitter Card SEO -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vexornull.github.io/Live-coding/">
+    <meta property="twitter:title" content="VexorNull Studio | Ultimate Enterprise Code Runner">
+    <meta property="twitter:description" content="Professional multi-tab code editor and live sandbox environment designed by Tanveer Hussain.">
+    <meta property="twitter:image" content="https://vexornull.github.io/favicon/favicon.png">
+
+    <!-- JSON-LD Structured Data for Search Engine Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VexorNull Studio",
+      "operatingSystem": "All",
+      "applicationCategory": "DeveloperApplication",
+      "url": "https://vexornull.github.io/Live-coding/",
+      "author": {
+        "@type": "Person",
+        "name": "Tanveer Hussain",
+        "url": "https://Instagram.com/vexornull"
+      },
+      "description": "Enterprise-grade multi-tab code execution studio with live HTML/CSS/JS preview and instant project exporting capabilities."
+    }
+    </script>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -91,6 +125,9 @@
 
                 <!-- Global Actions -->
                 <div class="flex items-center gap-2 flex-wrap">
+                    <button type="button" onclick="clearAllCode()" class="text-xs bg-rose-950/80 hover:bg-rose-900 text-rose-300 px-3 py-1.5 rounded-lg transition border border-rose-800/60 cursor-pointer flex items-center gap-1" title="Clear all editor contents">
+                        <i class="fa-solid fa-trash-can"></i> Clear Code
+                    </button>
                     <button type="button" onclick="copyAllCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
                         <i class="fa-solid fa-copy"></i> Copy All
                     </button>
@@ -159,13 +196,15 @@
             if (savedHtml !== null) codeHtml.value = savedHtml;
             else codeHtml.value = `<!-- Tanveer Hussain (@vexornull) - Profile Template -->
 <div class="profile-card">
-    <a href="https://drive.google.com/file/d/1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR/view?usp=drivesdk" target="_blank" class="avatar-link" title="View Experience Letter">
-        <div class="avatar">TH</div>
-        <div class="badge-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+    <a href="https://Instagram.com/vexornull" target="_blank" class="avatar-link" title="Visit Instagram @vexornull">
+        <div class="avatar-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Tanveer Hussain Profile Photo" class="profile-img">
+            <div class="badge-icon"><i class="fa-brands fa-instagram"></i></div>
+        </div>
     </a>
     <h1>Tanveer Hussain</h1>
-    <p class="handle">@vexornull | Full-Stack Developer</p>
-    <p class="bio">Welcome to VexorNull Studio! Upar di gayi profile picture par click karke aap experience letter dekh sakte hain.</p>
+    <p class="handle">@vexornull | Web Developer & Finance Assistant</p>
+    <p class="bio">Welcome to VexorNull Code Studio! Professional web development environment featuring multi-tab editing, live sandbox previews, and custom frontend tools.</p>
     <button onclick="greetUser()">Say Hello</button>
 </div>`;
 
@@ -188,7 +227,7 @@ body {
     padding: 35px;
     border-radius: 24px;
     text-align: center;
-    max-width: 360px;
+    max-width: 380px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
 .avatar-link {
@@ -197,44 +236,46 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
-.avatar {
-    width: 80px;
-    height: 80px;
+.avatar-container {
+    width: 85px;
+    height: 85px;
     margin: 0 auto 15px auto;
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
-    color: white;
-    font-size: 28px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 22px;
+    position: relative;
+    border-radius: 50%;
+    overflow: visible;
+}
+.profile-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3b82f6;
     box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 2px solid rgba(255, 255, 255, 0.1);
 }
-.avatar-link:hover .avatar {
+.avatar-link:hover .profile-img {
     transform: scale(1.05);
     box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.7);
     border-color: #60a5fa;
 }
 .badge-icon {
     position: absolute;
-    bottom: 12px;
-    right: -2px;
-    background: #2563eb;
+    bottom: 0;
+    right: 0;
+    background: #e1306c;
     color: white;
-    font-size: 10px;
-    width: 22px;
-    height: 22px;
+    font-size: 11px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #0f172a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 h1 { font-size: 22px; font-weight: 800; margin-bottom: 4px; color: #ffffff; }
-.handle { font-size: 13px; color: #60a5fa; font-family: monospace; margin-bottom: 15px; }
+.handle { font-size: 12px; color: #60a5fa; font-family: monospace; margin-bottom: 15px; font-weight: 600; }
 .bio { font-size: 13px; color: #94a3b8; line-height: 1.6; margin-bottom: 25px; }
 button {
     background: #2563eb;
@@ -257,8 +298,12 @@ function greetWorkspace() {
 }
 greetWorkspace();
 
+function greetQuery() {
+    alert("Hello! Aap VexorNull Code Studio use kar rahe hain. Profile picture par click karke Instagram (@vexornull) par visit kar sakte hain!");
+}
+
 function greetUser() {
-    alert("Hello! Aap VexorNull Code Studio use kar rahe hain. Profile picture par click karke Google Drive ka experience letter check kar sakte hain!");
+    greetQuery();
 }`;
         };
 
@@ -344,6 +389,17 @@ function greetUser() {
 
         function refreshWebsitePreview() {
             switchMainView('live');
+        }
+
+        function clearAllCode() {
+            if (confirm("Kya aap saara code clear karna chahte hain?")) {
+                codeHtml.value = '';
+                codeCss.value = '';
+                codeJs.value = '';
+                localStorage.removeItem('vex_html');
+                localStorage.removeItem('vex_css');
+                localStorage.removeItem('vex_js');
+            }
         }
 
         function copyAllCode() {
