@@ -1,0 +1,17 @@
+{
+  "name": "VexorNull Studio",
+  "short_name": "VexorStudio",
+  "start_url": "/Live-coding/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "description": "Professional multi-language and multi-file code testing studio supporting full website development and live previews.",
+  "icons": [
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
