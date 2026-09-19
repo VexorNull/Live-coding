@@ -7,9 +7,9 @@
     <!-- ========================================== -->
     <!-- ADVANCED END-LEVEL SEO & METADATA -->
     <!-- ========================================== -->
-    <title>VexorNull | Ultimate Universal Code Studio & Interactive Live Runner</title>
-    <meta name="title" content="VexorNull | Ultimate Universal Code Studio & Interactive Live Runner">
-    <meta name="description" content="Professional universal multi-language code testing studio and interactive live notepad supporting HTML, CSS, JavaScript, Python, PHP, C++, and more with full functional preview. Developed by Tanveer Hussain.">
+    <title>VexorNull | Ultimate Pro Max Universal Code Studio</title>
+    <meta name="title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
+    <meta name="description" content="Professional universal multi-language code testing studio and interactive live notepad with export, copy, and full functional sandbox execution. Developed by Tanveer Hussain.">
     <meta name="keywords" content="universal code tester, multi language notepad, html editor, python runner, developer studio, online code runner, vexornull, tanveer hussain, web development tools">
     <meta name="author" content="Tanveer Hussain">
     <meta name="creator" content="Tanveer Hussain">
@@ -22,14 +22,14 @@
     <!-- Open Graph / Facebook Advanced SEO Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vexornull.github.io/Live-coding/">
-    <meta property="og:title" content="VexorNull | Ultimate Universal Code Studio & Interactive Live Runner">
+    <meta property="og:title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
     <meta property="og:description" content="Test and run HTML, CSS, JS, Python, and multi-language code instantly with full functional live output workspace. Built by Tanveer Hussain (@vexornull).">
     <meta property="og:site_name" content="VexorNull Developer Studio">
 
     <!-- Twitter Card Advanced SEO Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vexornull.github.io/Live-coding/">
-    <meta name="twitter:title" content="VexorNull | Ultimate Universal Code Studio">
+    <meta name="twitter:title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
     <meta name="twitter:description" content="Instant multi-language live code testing notepad workspace with fully interactive sandbox execution.">
     <meta name="twitter:creator" content="@vexornull">
 
@@ -38,7 +38,7 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "VexorNull Universal Code Studio",
+      "name": "VexorNull Universal Code Studio Pro Max",
       "operatingSystem": "All",
       "applicationCategory": "DeveloperApplication",
       "description": "A universal multi-language code testing notepad and fully interactive live preview environment.",
@@ -87,7 +87,7 @@
     <header class="w-full py-3 px-4 sm:px-6 border-b border-slate-800/80 flex justify-between items-center glass sticky top-0 z-50">
         <div class="flex items-center space-x-2.5">
             <div class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></div>
-            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">PRO v4.5</span></span>
+            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">PRO MAX v5.0</span></span>
         </div>
         
         <!-- Interactive View Switcher Dock -->
@@ -112,34 +112,45 @@
         <div id="workspaceCode" class="flex flex-col flex-grow space-y-3">
             <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl flex-wrap gap-2">
                 <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                    <i class="fa-solid fa-terminal text-blue-400"></i> Universal Multi-Language Code Studio (Fully Interactive)
+                    <i class="fa-solid fa-terminal text-blue-400"></i> Universal Code Studio Pro Max
                 </div>
-                <div class="flex items-center gap-2">
-                    <button type="button" onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <button type="button" onclick="copyCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-copy"></i> Copy
+                    </button>
+                    <button type="button" onclick="downloadCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-download"></i> Save File
+                    </button>
+                    <button type="button" onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-red-400 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
                         <i class="fa-solid fa-trash-can"></i> Clear
                     </button>
                     <button type="button" onclick="switchView('live')" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5 cursor-pointer">
-                        <i class="fa-solid fa-bolt"></i> Run / Live Output <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        <i class="fa-solid fa-bolt"></i> Run <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Code Input Textarea -->
-            <textarea id="notepadInput" placeholder="Yahan apna HTML, CSS, JavaScript ya kisi bhi app ka code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
+            <textarea id="notepadInput" placeholder="Yahan apna code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
         </div>
 
         <!-- Live Output Sandbox View -->
         <div id="workspaceLive" class="hidden flex-col flex-grow space-y-3">
-            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl">
+            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl flex-wrap gap-2">
                 <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono">
-                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Fully Interactive Sandbox Active
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Interactive Sandbox Running
                 </div>
-                <button type="button" onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg cursor-pointer">
-                    <i class="fa-solid fa-arrow-left"></i> Back to Editor
-                </button>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="reloadSandbox()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-750 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-rotate"></i> Refresh Output
+                    </button>
+                    <button type="button" onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg cursor-pointer">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Editor
+                    </button>
+                </div>
             </div>
 
-            <!-- Sandboxed Output Frame with Full Interaction Permissions -->
+            <!-- Sandboxed Output Frame -->
             <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-slate-900 shadow-2xl min-h-[70vh] flex flex-col">
                 <iframe id="liveSandboxFrame" sandbox="allow-scripts allow-modals allow-forms allow-same-origin allow-popups" class="w-full flex-grow border-0 bg-white"></iframe>
             </div>
@@ -161,7 +172,7 @@
             if (savedNotepadCode) {
                 notepadInput.value = savedNotepadCode;
             } else {
-                notepadInput.value = `<!DOCTYPE html>\n<html lang="en" class="dark">\n<head>\n    <meta charset="UTF-8">\n    <title>BinaryCipher PRO v4.0</title>\n    <script src="https://cdn.tailwindcss.com"><\/script>\n</head>\n<body class="bg-slate-950 text-slate-100 p-6 flex flex-col items-center justify-center min-h-screen">\n    <div class="max-w-md w-full bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl text-center">\n        <h1 class="text-xl font-extrabold text-blue-500 mb-2">BinaryCipher PRO v4.0</h1>\n        <p class="text-slate-400 text-xs mb-4">Enterprise Crypto Suite & Universal Encoder</p>\n        <button onclick="alert('Button is fully functional!')" class="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition">Test Function</button>\n    </div>\n</body>\n</html>`;
+                notepadInput.value = `<!DOCTYPE html>\n<html lang="en" class="dark">\n<head>\n    <meta charset="UTF-8">\n    <title>VexorNull Pro Max</title>\n    <script src="https://cdn.tailwindcss.com"><\/script>\n</head>\n<body class="bg-slate-950 text-slate-100 p-6 flex flex-col items-center justify-center min-h-screen">\n    <div class="max-w-md w-full bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl text-center">\n        <h1 class="text-xl font-extrabold text-blue-500 mb-2">VexorNull Pro Max</h1>\n        <p class="text-slate-400 text-xs mb-4">Universal Code Testing Studio</p>\n        <button onclick="alert('Studio is fully operational!')" class="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition cursor-pointer">Test Action</button>\n    </div>\n</body>\n</html>`;
             }
         };
 
@@ -174,6 +185,28 @@
                 notepadInput.value = '';
                 localStorage.removeItem('vexornull_universal_code');
             }
+        }
+
+        function copyCode() {
+            navigator.clipboard.writeText(notepadInput.value).then(() => {
+                alert('Code successfully copied to clipboard!');
+            });
+        }
+
+        function downloadCode() {
+            const blob = new Blob([notepadInput.value], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'vexornull_project.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function reloadSandbox() {
+            switchView('live');
         }
 
         function switchView(viewName) {
@@ -191,7 +224,6 @@
                 
                 const trimmed = userCode.trim().toLowerCase();
                 
-                // Agar JavaScript likhi ho to interactive console runner
                 if (!trimmed.startsWith('<!doctype') && !trimmed.startsWith('<html') && (trimmed.includes('console.log') || trimmed.includes('function') || trimmed.includes('let ') || trimmed.includes('const ') || trimmed.includes('alert('))) {
                     finalContent = `<!DOCTYPE html>
 <html class="dark">
@@ -227,7 +259,6 @@
 </body>
 </html>`;
                 } 
-                // Agar doosri languages hon
                 else if (!trimmed.startsWith('<!doctype') && !trimmed.startsWith('<html')) {
                     finalContent = `<!DOCTYPE html>
 <html class="dark">
@@ -247,7 +278,6 @@
 </html>`;
                 }
 
-                // Blob ke zariye render karne ke sath iframe me proper permissions set ki gayi hain
                 const blob = new Blob([finalContent], { type: 'text/html' });
                 iframe.src = URL.createObjectURL(blob);
 
