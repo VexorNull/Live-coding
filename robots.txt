@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Location Declaration
+Sitemap: https://vexornull.github.io/Live-coding/sitemap.xml
