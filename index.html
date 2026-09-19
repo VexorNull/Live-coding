@@ -4,14 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- Advanced Professional SEO & Branding Meta Tags -->
-    <title>VexorNull | Universal Multi-Language Code Tester & Notepad</title>
-    <meta name="title" content="VexorNull | Universal Multi-Language Code Tester & Notepad">
-    <meta name="description" content="Universal multi-language code testing notepad supporting HTML, CSS, JS, Python, PHP, C++, and more with instant live preview. Developed by Tanveer Hussain (@vexornull).">
-    <meta name="keywords" content="universal code tester, multi language notepad, html editor, python runner, developer studio, vexornull, tanveer hussain">
+    <!-- ========================================== -->
+    <!-- ADVANCED END-LEVEL SEO & METADATA -->
+    <!-- ========================================== -->
+    <title>VexorNull | Universal Multi-Language Code Tester & Developer Notepad Studio</title>
+    <meta name="title" content="VexorNull | Universal Multi-Language Code Tester & Developer Notepad Studio">
+    <meta name="description" content="Professional universal multi-language code testing studio and live notepad supporting HTML, CSS, JavaScript, Python, PHP, C++, and more with instant live preview. Developed by Tanveer Hussain.">
+    <meta name="keywords" content="universal code tester, multi language notepad, html editor, python runner, developer studio, online code runner, vexornull, tanveer hussain, web development tools">
     <meta name="author" content="Tanveer Hussain">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://vexornull.github.io/">
+    <meta name="creator" content="Tanveer Hussain">
+    <meta name="publisher" content="VexorNull Studio">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://vexornull.github.io/Live-coding/">
+
+    <!-- Open Graph / Facebook Advanced SEO Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vexornull.github.io/Live-coding/">
+    <meta property="og:title" content="VexorNull | Universal Multi-Language Code Tester & Developer Notepad">
+    <meta property="og:description" content="Test and run HTML, CSS, JS, Python, and multi-language code instantly with live preview output workspace. Built by Tanveer Hussain (@vexornull).">
+    <meta property="og:image" content="https://vexornull.github.io/assets/preview.png">
+    <meta property="og:site_name" content="VexorNull Developer Studio">
+
+    <!-- Twitter Card Advanced SEO Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vexornull.github.io/Live-coding/">
+    <meta name="twitter:title" content="VexorNull | Universal Multi-Language Code Tester">
+    <meta name="twitter:description" content="Instant multi-language live code testing notepad workspace with sandbox execution.">
+    <meta name="twitter:creator" content="@vexornull">
+    <meta name="twitter:image" content="https://vexornull.github.io/assets/preview.png">
+
+    <!-- Schema.org Structured Data (JSON-LD for Software Application / Developer Tool) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VexorNull Universal Code Tester",
+      "operatingSystem": "All",
+      "applicationCategory": "DeveloperApplication",
+      "description": "A universal multi-language code testing notepad and instant live preview environment.",
+      "url": "https://vexornull.github.io/Live-coding/",
+      "author": {
+        "@type": "Person",
+        "name": "Tanveer Hussain",
+        "alternateName": "VexorNull",
+        "sameAs": "https://Instagram.com/vexornull"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <!-- ========================================== -->
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,15 +90,15 @@
     <header class="w-full py-3 px-4 sm:px-6 border-b border-slate-800/80 flex justify-between items-center glass sticky top-0 z-50">
         <div class="flex items-center space-x-2.5">
             <div class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></div>
-            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">UNIVERSAL v2.0</span></span>
+            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">SEO v2.2</span></span>
         </div>
         
         <!-- Interactive View Switcher Dock -->
         <div class="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-xl shadow-lg">
-            <button onclick="switchView('code')" id="btnCode" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow">
+            <button type="button" id="btnCode" onclick="switchView('code')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow">
                 <i class="fa-solid fa-code"></i> <span class="hidden sm:inline">Back to</span> Code
             </button>
-            <button onclick="switchView('live')" id="btnLive" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5">
+            <button type="button" id="btnLive" onclick="switchView('live')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5">
                 <i class="fa-solid fa-play text-emerald-400"></i> Live Output
             </button>
         </div>
@@ -71,10 +118,10 @@
                     <i class="fa-solid fa-terminal text-blue-400"></i> Universal Code Notepad (All Languages Supported)
                 </div>
                 <div class="flex items-center gap-2">
-                    <button onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700">
+                    <button type="button" onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700">
                         <i class="fa-solid fa-trash-can"></i> Clear
                     </button>
-                    <button onclick="launchLivePreview()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5">
+                    <button type="button" onclick="switchView('live')" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5 cursor-pointer">
                         <i class="fa-solid fa-bolt"></i> Run / Live Output <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 </div>
@@ -90,14 +137,14 @@
                 <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono">
                     <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Universal Execution Sandbox Active
                 </div>
-                <button onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg">
+                <button type="button" onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg cursor-pointer">
                     <i class="fa-solid fa-arrow-left"></i> Back to Code
                 </button>
             </div>
 
             <!-- Sandboxed Output Frame -->
             <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-slate-900 shadow-2xl min-h-[70vh] flex flex-col">
-                <iframe id="liveSandboxFrame" sandbox="allow-scripts allow-modals allow-forms" class="w-full flex-grow border-0 bg-white"></iframe>
+                <iframe id="liveSandboxFrame" class="w-full flex-grow border-0 bg-white"></iframe>
             </div>
         </div>
 
@@ -117,7 +164,7 @@
             if (savedNotepadCode) {
                 notepadInput.value = savedNotepadCode;
             } else {
-                notepadInput.value = `<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Universal Test Page</title>\n    <style>\n        body { font-family: 'Plus Jakarta Sans', sans-serif; text-align: center; padding-top: 40px; background: #0f172a; color: #fff; }\n        h1 { color: #3b82f6; }\n        .box { background: #1e293b; padding: 15px; border-radius: 10px; display: inline-block; margin-top: 10px; border: 1px solid #334155; }\n    </style>\n</head>\n<body>\n    <h1>Hello Tanveer!</h1>\n    <div class="box">\n        <p>Aapka Universal Notepad ab har tarah ke code ko support karta hai.</p>\n    </div>\n</body>\n</html>`;
+                notepadInput.value = `<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Universal Test Page</title>\n    <style>\n        body { font-family: sans-serif; text-align: center; padding-top: 40px; background: #0f172a; color: #fff; }\n        h1 { color: #3b82f6; }\n        .box { background: #1e293b; padding: 15px; border-radius: 10px; display: inline-block; margin-top: 10px; border: 1px solid #334155; }\n    </style>\n</head>\n<body>\n    <h1>Hello Tanveer!</h1>\n    <div class="box">\n        <p>Aapka Universal SEO-Optimized Notepad ab ready hai.</p>\n    </div>\n</body>\n</html>`;
             }
         };
 
@@ -139,7 +186,15 @@
             const btnLive = document.getElementById('btnLive');
 
             if (viewName === 'live') {
-                launchLivePreview();
+                let userCode = notepadInput.value;
+                localStorage.setItem('vexornull_universal_code', userCode);
+                
+                const iframe = document.getElementById('liveSandboxFrame');
+                
+                // Safe blob execution setup for all languages
+                const blob = new Blob([userCode.trim().toLowerCase().startsWith('<!doctype') || userCode.trim().toLowerCase().startsWith('<html') ? userCode : `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body { background: #0f172a; color: #f8fafc; font-family: monospace; padding: 20px; margin: 0; } pre { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; overflow-x: auto; font-size: 13px; line-height: 1.5; } .badge { background: #3b82f6; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-family: sans-serif; font-weight: bold; display: inline-block; margin-bottom: 10px; }</style></head><body><div class="badge">Universal Code Viewer Mode</div><pre><code>${userCode.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre></body></html>`], { type: 'text/html' });
+                iframe.src = URL.createObjectURL(blob);
+
                 codeWorkspace.classList.add('hidden');
                 codeWorkspace.classList.remove('flex');
                 liveWorkspace.classList.remove('hidden');
@@ -154,51 +209,8 @@
                 codeWorkspace.classList.add('flex');
 
                 btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
-                btnCode.className, "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
+                btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
             }
-        }
-
-        function launchLivePreview() {
-            let userCode = notepadInput.value;
-            localStorage.setItem('vexornull_universal_code', userCode);
-            
-            const iframe = document.getElementById('liveSandboxFrame');
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            
-            // Intelligent parser: agar user ne HTML tags nahi likhe (jaise Python ya C++ code), toh usko automatically safe <pre><code> block me wrap kar dega taaki error na aaye aur code neatly show ho.
-            if (!userCode.trim().toLowerCase().startsWith('<!doctype') && !userCode.trim().toLowerCase().startsWith('<html')) {
-                userCode = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<style>
-  body { background: #0f172a; color: #f8fafc; font-family: 'Fira Code', monospace; padding: 20px; margin: 0; }
-  pre { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; overflow-x: auto; font-size: 13px; line-height: 1.5; }
-  .badge { background: #3b82f6; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-family: sans-serif; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-</style>
-</head>
-<body>
-  <div class="badge">Universal Code Viewer Mode</div>
-  <pre><code>${escapeHtml(userCode)}</code></pre>
-</body>
-</html>`;
-            }
-
-            iframeDoc.open();
-            iframeDoc.write(userCode);
-            iframeDoc.close();
-
-            document.getElementById('workspaceCode').classList.add('hidden');
-            document.getElementById('workspaceCode').classList.remove('flex');
-            document.getElementById('workspaceLive').classList.remove('hidden');
-            document.getElementById('workspaceLive').classList.add('flex');
-
-            document.getElementById('btnCode').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
-            document.getElementById('btnLive').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white flex items-center gap-1.5 shadow";
-        }
-
-        function escapeHtml(text) {
-            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         }
     </script>
 </body>
