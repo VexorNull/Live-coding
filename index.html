@@ -5,58 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- ========================================== -->
-    <!-- ADVANCED END-LEVEL SEO & METADATA -->
+    <!-- ADVANCED ENTERPRISE SEO & METADATA -->
     <!-- ========================================== -->
-    <title>VexorNull | Ultimate Pro Max Universal Code Studio</title>
-    <meta name="title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
-    <meta name="description" content="Professional universal multi-language code testing studio and interactive live notepad with export, copy, and full functional sandbox execution. Developed by Tanveer Hussain.">
-    <meta name="keywords" content="universal code tester, multi language notepad, html editor, python runner, developer studio, online code runner, vexornull, tanveer hussain, web development tools">
+    <title>VexorNull | Ultimate Enterprise Multi-Tab Code Studio</title>
+    <meta name="title" content="VexorNull | Ultimate Enterprise Multi-Tab Code Studio">
+    <meta name="description" content="Professional universal multi-language and multi-file code testing studio supporting full website development, split HTML/CSS/JS tabs, and live sandbox execution. Developed by Tanveer Hussain.">
+    <meta name="keywords" content="universal code tester, multi file editor, html css js runner, developer studio, online code runner, vexornull, tanveer hussain">
     <meta name="author" content="Tanveer Hussain">
     <meta name="creator" content="Tanveer Hussain">
     <meta name="publisher" content="VexorNull Studio">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="language" content="English">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0f172a">
     <link rel="canonical" href="https://vexornull.github.io/Live-coding/">
-
-    <!-- Open Graph / Facebook Advanced SEO Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vexornull.github.io/Live-coding/">
-    <meta property="og:title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
-    <meta property="og:description" content="Test and run HTML, CSS, JS, Python, and multi-language code instantly with full functional live output workspace. Built by Tanveer Hussain (@vexornull).">
-    <meta property="og:site_name" content="VexorNull Developer Studio">
-
-    <!-- Twitter Card Advanced SEO Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://vexornull.github.io/Live-coding/">
-    <meta name="twitter:title" content="VexorNull | Ultimate Pro Max Universal Code Studio">
-    <meta name="twitter:description" content="Instant multi-language live code testing notepad workspace with fully interactive sandbox execution.">
-    <meta name="twitter:creator" content="@vexornull">
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "VexorNull Universal Code Studio Pro Max",
-      "operatingSystem": "All",
-      "applicationCategory": "DeveloperApplication",
-      "description": "A universal multi-language code testing notepad and fully interactive live preview environment.",
-      "url": "https://vexornull.github.io/Live-coding/",
-      "author": {
-        "@type": "Person",
-        "name": "Tanveer Hussain",
-        "alternateName": "VexorNull",
-        "sameAs": "https://Instagram.com/vexornull"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
+    <link rel="icon" type="image/png" href="https://vexornull.github.io/favicon/favicon.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -79,6 +40,7 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .code-font { font-family: 'Fira Code', monospace; color-scheme: dark; }
         .glass { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .tab-active { background: rgba(59, 130, 246, 0.15); border-color: #3b82f6; color: #60a5fa; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
@@ -87,16 +49,16 @@
     <header class="w-full py-3 px-4 sm:px-6 border-b border-slate-800/80 flex justify-between items-center glass sticky top-0 z-50">
         <div class="flex items-center space-x-2.5">
             <div class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></div>
-            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">PRO MAX v5.0</span></span>
+            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">ENTERPRISE v6.0</span></span>
         </div>
         
         <!-- Interactive View Switcher Dock -->
         <div class="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-xl shadow-lg">
-            <button type="button" id="btnCode" onclick="switchView('code')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow">
-                <i class="fa-solid fa-code"></i> <span class="hidden sm:inline">Editor</span>
+            <button type="button" id="btnCode" onclick="switchMainView('code')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow">
+                <i class="fa-solid fa-code"></i> <span class="hidden sm:inline">Workspace</span>
             </button>
-            <button type="button" id="btnLive" onclick="switchView('live')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5">
-                <i class="fa-solid fa-play text-emerald-400"></i> Live Output
+            <button type="button" id="btnLive" onclick="switchMainView('live')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5">
+                <i class="fa-solid fa-globe text-emerald-400"></i> Full Website Live Preview
             </button>
         </div>
 
@@ -108,51 +70,70 @@
     <!-- Main Workspace Container -->
     <main class="max-w-7xl mx-auto px-3 sm:px-6 py-4 w-full flex-grow flex flex-col">
         
-        <!-- Universal Notepad Code Editor View -->
+        <!-- Multi-Tab Code Editor View -->
         <div id="workspaceCode" class="flex flex-col flex-grow space-y-3">
-            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl flex-wrap gap-2">
-                <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                    <i class="fa-solid fa-terminal text-blue-400"></i> Universal Code Studio Pro Max
+            
+            <!-- Editor Toolbar & File Tabs -->
+            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-2.5 rounded-xl flex-wrap gap-2">
+                <!-- File Tabs Switcher -->
+                <div class="flex items-center gap-1.5 overflow-x-auto">
+                    <button type="button" id="tabHtmlBtn" onclick="switchTab('html')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition border border-slate-800 tab-active flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-brands fa-html5 text-orange-400"></i> index.html
+                    </button>
+                    <button type="button" id="tabCssBtn" onclick="switchTab('css')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition border border-slate-800 bg-slate-900 text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-brands fa-css3-alt text-blue-400"></i> style.css
+                    </button>
+                    <button type="button" id="tabJsBtn" onclick="switchTab('js')" class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition border border-slate-800 bg-slate-900 text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-brands fa-js text-yellow-400"></i> script.js
+                    </button>
                 </div>
+
+                <!-- Global Actions -->
                 <div class="flex items-center gap-2 flex-wrap">
-                    <button type="button" onclick="copyCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-copy"></i> Copy
+                    <button type="button" onclick="copyAllCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-copy"></i> Copy All
                     </button>
-                    <button type="button" onclick="downloadCode()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-download"></i> Save File
+                    <button type="button" onclick="downloadProject()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-download"></i> Export Website
                     </button>
-                    <button type="button" onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-red-400 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-trash-can"></i> Clear
-                    </button>
-                    <button type="button" onclick="switchView('live')" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5 cursor-pointer">
-                        <i class="fa-solid fa-bolt"></i> Run <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <button type="button" onclick="switchMainView('live')" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-play"></i> Run Website <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Code Input Textarea -->
-            <textarea id="notepadInput" placeholder="Yahan apna code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
+            <!-- Code Textareas for Individual Files -->
+            <div class="flex-grow flex flex-col relative min-h-[65vh]">
+                <!-- HTML Editor -->
+                <textarea id="codeHtml" class="w-full flex-grow bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
+                
+                <!-- CSS Editor (Hidden by default) -->
+                <textarea id="codeCss" class="hidden w-full flex-grow bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
+                
+                <!-- JS Editor (Hidden by default) -->
+                <textarea id="codeJs" class="hidden w-full flex-grow bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none spellcheck='false'"></textarea>
+            </div>
         </div>
 
-        <!-- Live Output Sandbox View -->
+        <!-- Live Output Website Preview View -->
         <div id="workspaceLive" class="hidden flex-col flex-grow space-y-3">
             <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl flex-wrap gap-2">
                 <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono">
-                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Interactive Sandbox Running
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Full Website Execution Active (HTML + CSS + JS)
                 </div>
                 <div class="flex items-center gap-2">
-                    <button type="button" onclick="reloadSandbox()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-750 cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-rotate"></i> Refresh Output
+                    <button type="button" onclick="refreshWebsitePreview()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-rotate"></i> Reload Preview
                     </button>
-                    <button type="button" onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg cursor-pointer">
+                    <button type="button" onclick="switchMainView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg cursor-pointer">
                         <i class="fa-solid fa-arrow-left"></i> Back to Editor
                     </button>
                 </div>
             </div>
 
-            <!-- Sandboxed Output Frame -->
+            <!-- Sandboxed Full Website Output Frame -->
             <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-slate-900 shadow-2xl min-h-[70vh] flex flex-col">
-                <iframe id="liveSandboxFrame" sandbox="allow-scripts allow-modals allow-forms allow-same-origin allow-popups" class="w-full flex-grow border-0 bg-white"></iframe>
+                <iframe id="liveWebsiteFrame" sandbox="allow-scripts allow-modals allow-forms allow-same-origin allow-popups" class="w-full flex-grow border-0 bg-white"></iframe>
             </div>
         </div>
 
@@ -160,132 +141,97 @@
 
     <!-- Footer -->
     <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-900 mt-2">
-        Universal Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
+        Enterprise Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
     </footer>
 
     <!-- Script Controller -->
     <script>
-        const notepadInput = document.getElementById('notepadInput');
+        const codeHtml = document.getElementById('codeHtml');
+        const codeCss = document.getElementById('codeCss');
+        const codeJs = document.getElementById('codeJs');
 
         window.onload = function() {
-            const savedNotepadCode = localStorage.getItem('vexornull_universal_code');
-            if (savedNotepadCode) {
-                notepadInput.value = savedNotepadCode;
-            } else {
-                notepadInput.value = `<!DOCTYPE html>\n<html lang="en" class="dark">\n<head>\n    <meta charset="UTF-8">\n    <title>VexorNull Pro Max</title>\n    <script src="https://cdn.tailwindcss.com"><\/script>\n</head>\n<body class="bg-slate-950 text-slate-100 p-6 flex flex-col items-center justify-center min-h-screen">\n    <div class="max-w-md w-full bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl text-center">\n        <h1 class="text-xl font-extrabold text-blue-500 mb-2">VexorNull Pro Max</h1>\n        <p class="text-slate-400 text-xs mb-4">Universal Code Testing Studio</p>\n        <button onclick="alert('Studio is fully operational!')" class="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition cursor-pointer">Test Action</button>\n    </div>\n</body>\n</html>`;
-            }
+            const savedHtml = localStorage.getItem('vex_html');
+            const savedCss = localStorage.getItem('vex_css');
+            const savedJs = localStorage.getItem('vex_js');
+
+            if (savedHtml !== null) codeHtml.value = savedHtml;
+            else codeHtml.value = `<!-- Full Website HTML Structure -->\n<div class="container">\n  <h1>Welcome to BinaryCipher PRO</h1>\n  <p>Puri website ka HTML, CSS aur JS ab alag-alag tabs me run hoga!</p>\n  <button onclick="triggerAlert()">Click Me</button>\n</div>`;
+
+            if (savedCss !== null) codeCss.value = savedCss;
+            else codeCss.value = `/* Custom Website Styling */\nbody {\n  background: #0f172a;\n  color: #f8fafc;\n  font-family: 'Plus Jakarta Sans', sans-serif;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n.container {\n  background: #1e293b;\n  padding: 30px;\n  border-radius: 16px;\n  border: 1px solid #334155;\n  text-align: center;\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);\n}\nh1 { color: #3b82f6; margin-bottom: 10px; font-size: 24px; }\np { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }\nbutton {\n  background: #2563eb;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  font-weight: bold;\n  cursor: pointer;\n}\nbutton:hover { background: #1d4ed8; }`;
+
+            if (savedJs !== null) codeJs.value = savedJs;
+            else codeJs.value = `// JavaScript interactivity\nfunction triggerAlert() {\n  alert('Website JavaScript & Functions are working perfectly!');\n}`;
         };
 
-        notepadInput.addEventListener('input', function() {
-            localStorage.setItem('vexornull_universal_code', notepadInput.value);
-        });
+        // Auto-save on input
+        codeHtml.addEventListener('input', () => localStorage.setItem('vex_html', codeHtml.value));
+        codeCss.addEventListener('input', () => localStorage.setItem('vex_css', codeCss.value));
+        codeJs.addEventListener('input', () => localStorage.setItem('vex_js', codeJs.value));
 
-        function clearNotepad() {
-            if(confirm('Kya aap saara code clear karna chahte hain?')) {
-                notepadInput.value = '';
-                localStorage.removeItem('vexornull_universal_code');
+        // Tab Switching Logic
+        function switchTab(tab) {
+            codeHtml.classList.add('hidden');
+            codeCss.classList.add('hidden');
+            codeJs.classList.add('hidden');
+
+            document.getElementById('tabHtmlBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition border border-slate-800 bg-slate-900 text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer";
+            document.getElementById('tabCssBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition border border-slate-800 bg-slate-900 text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer";
+            document.getElementById('tabJsBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition border border-slate-800 bg-slate-900 text-slate-400 hover:text-white flex items-center gap-1.5 cursor-pointer";
+
+            if (tab === 'html') {
+                codeHtml.classList.remove('hidden');
+                document.getElementById('tabHtmlBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition border border-slate-800 tab-active flex items-center gap-1.5 cursor-pointer";
+            } else if (tab === 'css') {
+                codeCss.classList.remove('hidden');
+                document.getElementById('tabCssBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition border border-slate-800 tab-active flex items-center gap-1.5 cursor-pointer";
+            } else if (tab === 'js') {
+                codeJs.classList.remove('hidden');
+                document.getElementById('tabJsBtn').className = "px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition border border-slate-800 tab-active flex items-center gap-1.5 cursor-pointer";
             }
         }
 
-        function copyCode() {
-            navigator.clipboard.writeText(notepadInput.value).then(() => {
-                alert('Code successfully copied to clipboard!');
-            });
-        }
-
-        function downloadCode() {
-            const blob = new Blob([notepadInput.value], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'vexornull_project.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
-        function reloadSandbox() {
-            switchView('live');
-        }
-
-        function switchView(viewName) {
+        // Main Workspace vs Live Preview Switcher
+        function switchMainView(view) {
             const codeWorkspace = document.getElementById('workspaceCode');
             const liveWorkspace = document.getElementById('workspaceLive');
             const btnCode = document.getElementById('btnCode');
             const btnLive = document.getElementById('btnLive');
 
-            if (viewName === 'live') {
-                let userCode = notepadInput.value;
-                localStorage.setItem('vexornull_universal_code', userCode);
-                
-                const iframe = document.getElementById('liveSandboxFrame');
-                let finalContent = userCode;
-                
-                const trimmed = userCode.trim().toLowerCase();
-                
-                if (!trimmed.startsWith('<!doctype') && !trimmed.startsWith('<html') && (trimmed.includes('console.log') || trimmed.includes('function') || trimmed.includes('let ') || trimmed.includes('const ') || trimmed.includes('alert('))) {
-                    finalContent = `<!DOCTYPE html>
-<html class="dark">
+            if (view === 'live') {
+                // Combine HTML, CSS, and JS into a single professional full-website bundle
+                const combinedWebsiteCode = `<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<script src="https://cdn.tailwindcss.com"><\/script>
-<style>
-  body { background: #0f172a; color: #f8fafc; font-family: monospace; padding: 20px; margin: 0; }
-  .console-box { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; font-size: 13px; line-height: 1.6; color: #38bdf8; margin-top: 10px; white-space: pre-wrap; }
-  .header-tag { background: #3b82f6; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-family: sans-serif; font-weight: bold; display: inline-block; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"><\/script>
+    <style>
+        ${codeCss.value}
+    </style>
 </head>
 <body>
-  <div class="header-tag"><i class="fa-solid fa-js"></i> JavaScript Runtime Output</div>
-  <div id="output" class="console-box">Initializing execution...\\n</div>
-  <script>
-    const outputDiv = document.getElementById('output');
-    const logs = [];
-    console.log = function(...args) {
-        logs.push(args.map(arg => typeof arg === 'object' ? JSON.stringify(arg, null, 2) : arg).join(' '));
-        outputDiv.innerHTML = logs.join('\\n');
-    };
-    console.error = function(...args) {
-        logs.push('<span style="color:#ef4444;">Error: ' + args.join(' ') + '</span>');
-        outputDiv.innerHTML = logs.join('\\n');
-    };
-    try {
-        ${userCode}
-    } catch(err) {
-        console.error(err.message);
-    }
-  <\/script>
+    ${codeHtml.value}
+    <script>
+        try {
+            ${codeJs.value}
+        } catch(e) {
+            console.error(e);
+        }
+    <\/script>
 </body>
 </html>`;
-                } 
-                else if (!trimmed.startsWith('<!doctype') && !trimmed.startsWith('<html')) {
-                    finalContent = `<!DOCTYPE html>
-<html class="dark">
-<head>
-<meta charset="UTF-8">
-<script src="https://cdn.tailwindcss.com"><\/script>
-<style>
-  body { background: #0f172a; color: #f8fafc; font-family: monospace; padding: 20px; margin: 0; }
-  pre { background: #1e293b; padding: 15px; border-radius: 12px; border: 1px solid #334155; overflow-x: auto; font-size: 13px; line-height: 1.5; color: #38bdf8; }
-  .badge { background: #8b5cf6; color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-family: sans-serif; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-</style>
-</head>
-<body>
-  <div class="badge"><i class="fa-solid fa-code"></i> Universal Multi-Language Code View</div>
-  <pre><code>${userCode.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>
-</body>
-</html>`;
-                }
 
-                const blob = new Blob([finalContent], { type: 'text/html' });
+                const iframe = document.getElementById('liveWebsiteFrame');
+                const blob = new Blob([combinedWebsiteCode], { type: 'text/html' });
                 iframe.src = URL.createObjectURL(blob);
 
                 codeWorkspace.classList.add('hidden');
                 codeWorkspace.classList.remove('flex');
                 liveWorkspace.classList.remove('hidden');
                 liveWorkspace.classList.add('flex');
-                
+
                 btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
                 btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white flex items-center gap-1.5 shadow";
             } else {
@@ -297,6 +243,30 @@
                 btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
                 btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
             }
+        }
+
+        function refreshWebsitePreview() {
+            switchMainView('live');
+        }
+
+        function copyAllCode() {
+            const fullBundle = `/* --- index.html --- */\n${codeHtml.value}\n\n/* --- style.css --- */\n${codeCss.value}\n\n/* --- script.js --- */\n${codeJs.value}`;
+            navigator.clipboard.writeText(fullBundle).then(() => {
+                alert('All files code successfully copied!');
+            });
+        }
+
+        function downloadProject() {
+            const fullBundle = `<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>VexorNull Exported Website</title>\n<script src="https://cdn.tailwindcss.com"><\/script>\n<style>\n${codeCss.value}\n</style>\n</head>\n<body>\n${codeHtml.value}\n<script>\n${codeJs.value}\n<\/script>\n</body>\n</html>`;
+            const blob = new Blob([fullBundle], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'index.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
     </script>
 </body>
