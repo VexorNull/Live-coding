@@ -18,6 +18,7 @@
     <meta name="theme-color" content="#0f172a">
     <link rel="canonical" href="https://vexornull.github.io/Live-coding/">
     <link rel="icon" type="image/png" href="https://vexornull.github.io/favicon/favicon.png">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -156,13 +157,78 @@
             const savedJs = localStorage.getItem('vex_js');
 
             if (savedHtml !== null) codeHtml.value = savedHtml;
-            else codeHtml.value = `<!-- Full Website HTML Structure -->\n<div class="container">\n  <h1>Welcome to BinaryCipher PRO</h1>\n  <p>Puri website ka HTML, CSS aur JS ab alag-alag tabs me run hoga!</p>\n  <button onclick="triggerAlert()">Click Me</button>\n</div>`;
+            else codeHtml.value = `<!-- Tanveer Hussain (@vexornull) - Profile Template -->
+<div class="profile-card">
+    <div class="avatar">TH</div>
+    <h1>Tanveer Hussain</h1>
+    <p class="handle">@vexornull | Full-Stack Developer</p>
+    <p class="bio">Welcome to VexorNull Studio! Yahan aap apni HTML, CSS aur JS ki websites ko alag-alag tabs me likh kar live run kar sakte hain.</p>
+    <button onclick="greetUser()">Say Hello</button>
+</div>`;
 
             if (savedCss !== null) codeCss.value = savedCss;
-            else codeCss.value = `/* Custom Website Styling */\nbody {\n  background: #0f172a;\n  color: #f8fafc;\n  font-family: 'Plus Jakarta Sans', sans-serif;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n.container {\n  background: #1e293b;\n  padding: 30px;\n  border-radius: 16px;\n  border: 1px solid #334155;\n  text-align: center;\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);\n}\nh1 { color: #3b82f6; margin-bottom: 10px; font-size: 24px; }\np { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }\nbutton {\n  background: #2563eb;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  font-weight: bold;\n  cursor: pointer;\n}\nbutton:hover { background: #1d4ed8; }`;
+            else codeCss.value = `/* Modern Portfolio Styles */
+body {
+    background: #030712;
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.profile-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 360px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+.avatar {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px auto;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+}
+h1 { font-size: 22px; font-weight: 800; margin-bottom: 4px; color: #ffffff; }
+.handle { font-size: 13px; color: #60a5fa; font-family: monospace; margin-bottom: 15px; }
+.bio { font-size: 13px; color: #94a3b8; line-height: 1.6; margin-bottom: 25px; }
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+button:hover { background: #1d4ed8; transform: translateY(-1px); }`;
 
             if (savedJs !== null) codeJs.value = savedJs;
-            else codeJs.value = `// JavaScript interactivity\nfunction triggerAlert() {\n  alert('Website JavaScript & Functions are working perfectly!');\n}`;
+            else codeJs.value = `// JavaScript Interactivity
+function greetWorkspace() {
+    console.log("VexorNull Studio v6.0 Initialized successfully by Tanveer Hussain.");
+}
+greetWorkspace();
+
+function greetUser() {
+    alert("Hello! Aap VexorNull Code Studio use kar rahe hain. Code likhein aur live preview dekhein!");
+}`;
         };
 
         // Auto-save on input
@@ -200,7 +266,6 @@
             const btnLive = document.getElementById('btnLive');
 
             if (view === 'live') {
-                // Combine HTML, CSS, and JS into a single professional full-website bundle
                 const combinedWebsiteCode = `<!DOCTYPE html>
 <html lang="en">
 <head>
