@@ -5,54 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Advanced Professional SEO & Branding Meta Tags -->
-    <title>VexorNull | Official Enterprise Credential & Verification Studio</title>
-    <meta name="title" content="VexorNull | Official Enterprise Credential & Verification Studio">
-    <meta name="description" content="Official secure digital credential and employee verification ID card generator studio. Developed by Tanveer Hussain (@vexornull).">
-    <meta name="keywords" content="employee id, digital credential, official pass, verification studio, vexornull, tanveer hussain, secure ID generator">
+    <title>VexorNull | Live Code Tester & Developer Notepad Studio</title>
+    <meta name="title" content="VexorNull | Live Code Tester & Developer Notepad Studio">
+    <meta name="description" content="Professional live code testing notepad studio with instant real-time output preview. Developed by Tanveer Hussain (@vexornull).">
+    <meta name="keywords" content="live code tester, html notepad, developer studio, live preview, vexornull, tanveer hussain, web workspace">
     <meta name="author" content="Tanveer Hussain">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://vexornull.github.io/QR/">
-    
-    <!-- Custom Favicon Integration -->
-    <link rel="icon" type="image/png" href="https://vexornull.github.io/favicon/favicon.png">
-
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vexornull.github.io/QR/">
-    <meta property="og:title" content="VexorNull | Official Enterprise Credential Studio">
-    <meta property="og:description" content="Generate secure enterprise credentials, custom employee badges, and cryptographic verification passes instantly.">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR=s1000">
-    <meta property="og:site_name" content="VexorNull Security Studio">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://vexornull.github.io/QR/">
-    <meta name="twitter:title" content="VexorNull | Official Enterprise Credential Studio">
-    <meta name="twitter:description" content="Official secure digital credential and employee verification ID card generator studio.">
-    <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR=s1000">
-    <meta name="twitter:creator" content="@vexornull">
-
-    <!-- JSON-LD Structured Data for Search Engine Optimization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "VexorNull Enterprise Credential Studio",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "author": {
-        "@type": "Person",
-        "name": "Tanveer Hussain",
-        "alternateName": "vexornull"
-      },
-      "description": "Secure digital credential and employee ID card generator with real-time QR code encryption.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vexornull.github.io/">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,93 +21,163 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            DEFAULT: '#3b82f6',
-                            dark: '#1d4ed8',
-                        }
+                        brand: { DEFAULT: '#3b82f6', dark: '#1d4ed8' }
                     }
                 }
             }
         }
     </script>
-    <!-- FontAwesome Icons & html2canvas -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; color-scheme: dark; }
         .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .holo-stamp { background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(59,130,246,0.3) 50%, rgba(168,85,247,0.3) 100%); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); }
-        .qr-wrapper-v18 { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px); }
-        
-        /* Auto-adaptive scaling for mobile screens */
-        @media screen and (max-width: 640px) {
-            .responsive-card-container {
-                transform: scale(0.95);
-                transform-origin: top center;
-            }
-        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between p-3 sm:p-6 selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
-    <!-- Header Section -->
-    <header class="w-full max-w-md mx-auto py-3 px-4 mb-2 border border-slate-800/80 flex justify-between items-center glass rounded-2xl">
-        <div class="flex items-center space-x-2">
+    <!-- Header Navigation -->
+    <header class="w-full py-3 px-4 sm:px-6 border-b border-slate-800/80 flex justify-between items-center glass sticky top-0 z-50">
+        <div class="flex items-center space-x-2.5">
             <div class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></div>
-            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span></span>
+            <span class="font-extrabold text-sm sm:text-base tracking-wider text-white">VEXOR<span class="text-blue-500">NULL</span> <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-slate-300 ml-1">NOTEPAD v1.0</span></span>
         </div>
-        <div class="text-[10px] text-slate-400 font-mono">
+        
+        <!-- Interactive View Switcher Dock -->
+        <div class="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-xl shadow-lg">
+            <button onclick="switchView('code')" id="btnCode" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow">
+                <i class="fa-solid fa-code"></i> <span class="hidden sm:inline">Back to</span> Code
+            </button>
+            <button onclick="switchView('live')" id="btnLive" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5">
+                <i class="fa-solid fa-play text-emerald-400"></i> Live Output
+            </button>
+        </div>
+
+        <div class="hidden md:block text-xs text-slate-400 border-l border-slate-800 pl-4">
             By <a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline font-semibold">@vexornull</a>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="max-w-md w-full mx-auto glass p-4 sm:p-6 rounded-2xl shadow-2xl space-y-4 responsive-card-container flex-grow flex flex-col justify-center">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-            <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-blue-500"></i> Adaptive Credential View
-            </h2>
-            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded font-mono">SECURE v18.3</span>
-        </div>
+    <!-- Main Workspace Container -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 py-4 w-full flex-grow flex flex-col">
         
-        <!-- Adaptive ID Card Preview Box -->
-        <div id="digitalCard" class="w-full bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-4 sm:p-5 text-center shadow-2xl space-y-3 relative overflow-hidden">
-            <div class="absolute top-10 right-3 w-10 h-10 rounded-full holo-stamp flex items-center justify-center shadow-lg z-10 rotate-12 text-[7px] font-black text-blue-200">VERIFIED</div>
-            
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2 text-[10px] text-slate-400 font-mono">
-                <span>ID: #TN-2026-EMP</span>
-                <span class="text-blue-400 font-bold">OFFICIAL PASS</span>
-            </div>
-
-            <div class="w-16 h-16 mx-auto">
-                <img src="https://lh3.googleusercontent.com/d/1NzqmZp796ksKZrtpuMabgqpFXTGV3YIR=s1000" alt="Photo" class="w-16 h-16 rounded-xl object-cover border-2 border-blue-500 shadow-xl">
-            </div>
-
-            <div>
-                <h3 class="text-base sm:text-lg font-extrabold text-white">Tanveer Hussain</h3>
-                <p class="text-xs text-blue-400 font-semibold">Lead Enterprise Architect</p>
-            </div>
-
-            <!-- Reliable Direct API QR Code Container -->
-            <div class="pt-2 border-t border-slate-800 flex flex-col items-center">
-                <div class="qr-wrapper-v18 p-2.5 rounded-xl inline-flex justify-center items-center">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=TanveerHussain_VexorNull_AdaptiveSecureID" alt="QR Code" class="w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] rounded">
+        <!-- Notepad Code Editor View -->
+        <div id="workspaceCode" class="flex flex-col flex-grow space-y-3">
+            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl">
+                <div class="flex items-center gap-2 text-xs text-slate-300 font-mono">
+                    <i class="fa-solid fa-file-pen text-blue-400"></i> Live Notepad & Code Testing Workspace
                 </div>
-                <span class="text-[9px] text-slate-400 mt-1.5 font-mono">ADAPTIVE ENCRYPTED QR</span>
+                <div class="flex items-center gap-2">
+                    <button onclick="clearNotepad()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition border border-slate-700">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                    <button onclick="launchLivePreview()" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg transition shadow-lg flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt"></i> Live Output <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Code Input Textarea -->
+            <textarea id="notepadInput" placeholder="Yahan apna HTML, CSS ya JS code paste karein..." class="w-full flex-grow min-h-[65vh] bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs sm:text-sm text-slate-200 code-font focus:outline-none focus:border-blue-500 leading-relaxed shadow-inner resize-none"></textarea>
+        </div>
+
+        <!-- Live Output Sandbox View -->
+        <div id="workspaceLive" class="hidden flex-col flex-grow space-y-3">
+            <div class="flex justify-between items-center bg-slate-900/80 border border-slate-800 p-3 rounded-xl">
+                <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> Live Output Running Smoothly
+                </div>
+                <button onclick="switchView('code')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-lg">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Code
+                </button>
+            </div>
+
+            <!-- Sandboxed Output Frame -->
+            <div class="w-full flex-grow border border-slate-800 rounded-2xl overflow-hidden bg-white shadow-2xl min-h-[70vh]">
+                <iframe id="liveSandboxFrame" class="w-full h-full border-0"></iframe>
             </div>
         </div>
 
-        <button onclick="alert('Studio Verified Successfully by Tanveer Hussain (@vexornull)')" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold py-2.5 rounded-xl transition shadow flex items-center justify-center gap-2">
-            <i class="fa-solid fa-check-circle"></i> Verify Security Status
-        </button>
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-900/50 mt-4">
-        Official Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
+    <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-900 mt-2">
+        Developer Studio Built by <span class="text-slate-300 font-medium">Tanveer Hussain</span> (<a href="https://Instagram.com/vexornull" target="_blank" class="text-blue-400 hover:underline">@vexornull</a>)
     </footer>
 
+    <!-- Script Controller -->
+    <script>
+        // LocalStorage auto-save feature taaki code refresh ya tab band hone par zaya na ho
+        const notepadInput = document.getElementById('notepadInput');
+
+        window.onload = function() {
+            const savedNotepadCode = localStorage.getItem('vexornull_notepad_code');
+            if (savedNotepadCode) {
+                notepadInput.value = savedNotepadCode;
+            } else {
+                notepadInput.value = `<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <title>Test Page</title>\n    <style>\n        body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #0f172a; color: #fff; }\n        h1 { color: #3b82f6; }\n    </style>\n</head>\n<body>\n    <h1>Hello Tanveer!</h1>\n    <p>Aapka live notepad successfully chal raha hai.</p>\n</body>\n</html>`;
+            }
+        };
+
+        notepadInput.addEventListener('input', function() {
+            localStorage.setItem('vexornull_notepad_code', notepadInput.value);
+        });
+
+        function clearNotepad() {
+            if(confirm('Kya aap saara code clear karna chahte hain?')) {
+                notepadInput.value = '';
+                localStorage.removeItem('vexornull_notepad_code');
+            }
+        }
+
+        function switchView(viewName) {
+            const codeWorkspace = document.getElementById('workspaceCode');
+            const liveWorkspace = document.getElementById('workspaceLive');
+            const btnCode = document.getElementById('btnCode');
+            const btnLive = document.getElementById('btnLive');
+
+            if (viewName === 'live') {
+                launchLivePreview();
+                codeWorkspace.classList.add('hidden');
+                codeWorkspace.classList.remove('flex');
+                liveWorkspace.classList.remove('hidden');
+                liveWorkspace.classList.add('flex');
+                
+                btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
+                btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white flex items-center gap-1.5 shadow";
+            } else {
+                liveWorkspace.classList.add('hidden');
+                liveWorkspace.classList.remove('flex');
+                codeWorkspace.classList.remove('hidden');
+                codeWorkspace.classList.add('flex');
+
+                btnLive.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
+                btnCode.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-blue-600 text-white flex items-center gap-1.5 shadow";
+            }
+        }
+
+        function launchLivePreview() {
+            const userCode = notepadInput.value;
+            localStorage.setItem('vexornull_notepad_code', userCode);
+            
+            const iframe = document.getElementById('liveSandboxFrame');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(userCode);
+            iframeDoc.close();
+
+            // Switch view automatically
+            document.getElementById('workspaceCode').classList.add('hidden');
+            document.getElementById('workspaceCode').classList.remove('flex');
+            document.getElementById('workspaceLive').classList.remove('hidden');
+            document.getElementById('workspaceLive').classList.add('flex');
+
+            document.getElementById('btnCode').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-white flex items-center gap-1.5";
+            document.getElementById('btnLive').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white flex items-center gap-1.5 shadow";
+        }
+    </script>
 </body>
 </html>
